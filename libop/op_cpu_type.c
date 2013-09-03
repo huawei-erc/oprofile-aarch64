@@ -120,6 +120,7 @@ static struct cpu_descr const cpu_descrs[MAX_CPU_TYPE] = {
 	{ "ARM Cortex-A5", "arm/armv7-ca5", CPU_ARM_V7_CA5, 3 },
 	{ "ARM Cortex-A7", "arm/armv7-ca7", CPU_ARM_V7_CA7, 5 },
 	{ "ARM Cortex-A15", "arm/armv7-ca15", CPU_ARM_V7_CA15, 7 },
+	{ "ARM Cortex-A57", "arm/armv8-pmuv3", CPU_ARM_V8, 9 },
 	{ "Intel Haswell microarchitecture", "i386/haswell", CPU_HASWELL, 4 },
 	{ "IBM zEnterprise EC12", "s390/zEC12", CPU_S390_ZEC12, 1 },
 	{ "AMD64 generic", "x86-64/generic", CPU_AMD64_GENERIC, 4 },
@@ -374,6 +375,8 @@ static op_cpu _get_arm_cpu_type(void)
 			return op_get_cpu_number("arm/armv7-ca9");
 		case 0xc0f:
 			return op_get_cpu_number("arm/armv7-ca15");
+		case 0xd00:
+			return op_get_cpu_number("arm/armv8-pmuv3");
 		}
 	} else if (vendorid == 0x69) {	/* Intel xscale */
 		switch (cpuid >> 9) {

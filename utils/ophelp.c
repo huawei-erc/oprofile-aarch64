@@ -645,6 +645,12 @@ int main(int argc, char const * argv[])
 			"Cortex A15 DDI (ARM DDI 0438F, revision r3p1)\n";
 		break;
 
+	case CPU_ARM_V8:
+		event_doc =
+			"See Cortex-A57 MPCore Technical Reference Manual\n"
+			"Cortex A57 \n";
+		break;
+
 	case CPU_PPC64_PA6T:
 		event_doc =
 			"See PA6T Power Implementation Features Book IV\n"

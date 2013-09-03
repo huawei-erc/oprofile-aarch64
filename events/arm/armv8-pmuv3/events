@@ -1,0 +1,40 @@
+# ARM V8 events
+#
+
+#  Required events
+event:0x00 counters:1,2,3,4,5,6 um:zero minimum:500 name:PMNC_SW_INCR : Software increment of PMNC registers
+event:0x03 counters:1,2,3,4,5,6 um:zero minimum:500 name:L1_DCACHE_REFILL : Level 1 data cache refill
+event:0x04 counters:1,2,3,4,5,6 um:zero minimum:500 name:L1_DCACHE_ACCESS : Level 1 data cache access
+event:0x10 counters:1,2,3,4,5,6 um:zero minimum:500 name:PC_BRANCH_MIS_PRED : Mispredicted or not predicted branch speculatively executed
+event:0x12 counters:1,2,3,4,5,6 um:zero minimum:500 name:PC_BRANCH_PRED : Predictable branch speculatively executed
+event:0xFF counters:0 um:zero minimum:500 name:CPU_CYCLES : CPU cycle
+
+# At least one of the following is required
+event:0x08 counters:1,2,3,4,5,6 um:zero minimum:500 name:INST_EXECUTED : Instruction architecturally executed
+event:0x1B counters:1,2,3,4,5,6 um:zero minimum:500 name:OP_SPEC : Instruction speculatively executed
+
+# Common architectural events
+event:0x06 counters:1,2,3,4,5,6 um:zero minimum:500 name:MEM_READ : Load instruction architecturally executed, condition code pass
+event:0x07 counters:1,2,3,4,5,6 um:zero minimum:500 name:MEM_WRITE : Store instruction architecturally executed, condition code pass
+event:0x09 counters:1,2,3,4,5,6 um:zero minimum:500 name:EXC_TAKEN : Exception taken
+event:0x0A counters:1,2,3,4,5,6 um:zero minimum:500 name:EXC_EXECUTED : Exception return instruction architecturally executed
+event:0x0B counters:1,2,3,4,5,6 um:zero minimum:500 name:CID_WRITE : Write to CONTEXTIDR register architecturally executed
+event:0x0C counters:1,2,3,4,5,6 um:zero minimum:500 name:PC_WRITE : Software change of the PC architecturally executed, condition code pass
+event:0x0D counters:1,2,3,4,5,6 um:zero minimum:500 name:PC_IMM_BRANCH : Immediate branch instruction architecturally executed
+event:0x0E counters:1,2,3,4,5,6 um:zero minimum:500 name:PC_PROC_RETURN : Procedure return instruction architecturally executed, condition code pass
+event:0x0F counters:1,2,3,4,5,6 um:zero minimum:500 name:MEM_UNALIGNED_ACCESS : Unaligned load or store instruction architecturally executed, condition code pass
+event:0x1C counters:1,2,3,4,5,6 um:zero minimum:500 name:TTBR_WRITE : Write to TTBR architecturally executed, condition code pass
+
+# Common microarchitectural events
+event:0x01 counters:1,2,3,4,5,6 um:zero minimum:500 name:L1_ICACHE_REFILL : Level 1 instruction cache refill
+event:0x02 counters:1,2,3,4,5,6 um:zero minimum:500 name:L1_ITLB_REFILL : Level 1 instruction TLB refill
+event:0x05 counters:1,2,3,4,5,6 um:zero minimum:500 name:L1_DTLB_REFILL : Level 1 data TLB refill
+event:0x13 counters:1,2,3,4,5,6 um:zero minimum:500 name:MEM_ACCESS : Data memory access
+event:0x14 counters:1,2,3,4,5,6 um:zero minimum:500 name:L1_ICACHE_ACCESS : Level 1 instruction cache access
+event:0x15 counters:1,2,3,4,5,6 um:zero minimum:500 name:L1_DCACHE_WB : Level 1 data cache write-back
+event:0x16 counters:1,2,3,4,5,6 um:zero minimum:500 name:L2_CACHE_ACCESS : Level 2 data cache access
+event:0x17 counters:1,2,3,4,5,6 um:zero minimum:500 name:L2_CACHE_REFILL : Level 2 data cache refill
+event:0x18 counters:1,2,3,4,5,6 um:zero minimum:500 name:L2_CACHE_WB : Level 2 data cache write-back
+event:0x19 counters:1,2,3,4,5,6 um:zero minimum:500 name:BUS_ACCESS : Bus access
+event:0x1A counters:1,2,3,4,5,6 um:zero minimum:500 name:MEM_ERROR : Local memory error
+event:0x1D counters:1,2,3,4,5,6 um:zero minimum:500 name:BUS_CYCLES : Bus cycle
